@@ -1,0 +1,106 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+#root > h1 {
+  color: white;
+}
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2rem;
+}
+
+@media screen and (max-width: 768px) {
+  .cards {
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
+  }
+}
+
+.city-weather{
+  border-radius: 28px;
+  background-color: #ffffff;
+  color: black;
+  padding: 30px;
+  outline: 1px solid #ffffff;
+}
+
+.city-weather header {
+  background-color: #0d6efd;
+  border-radius: 2px;
+  padding: 15px;
+}
+
+.city-weather header h1 {
+  font-size: 1.2rem;
+  margin: 0;
+  text-align: center;
+  color: #ffffff;
+}
+
+.city-weather header p {
+  font-size: .9rem;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: 1rem;
+  text-transform: capitalize;
+  color: #ffffff;
+}
+
+.city-weather article {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  gap: 1rem;
+}
+
+.city-weather article p {
+  margin: 0;
+  font-size: .5rem;
+}
+
+.city-weather div.temp {
+  display: flex;
+  gap: 1rem;;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.city-weather div.temp div {
+  width: 18px;
+  height: 18px;
+  border: 1px solid white;
+  border-radius: 50%;
+}
+
+.cold {
+  background-color: blue;
+}
+
+.temperate {
+  background-color: orange;
+}
+
+.hot {
+  background-color: red;
+}
+
+.city-weather img {
+  filter: drop-shadow(0 0 0.75rem blue);
+}
+
+.error {
+  color: red;
+}
+
+.city-weather footer {
+  font-size: .5rem;
+  bottom: 0;;
+}
